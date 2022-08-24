@@ -1,0 +1,27 @@
+.product-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.producto {
+    border-color: black;
+}
+.product-img {
+    width: 250px;
+    height: 250px;
+}
+.product-title{
+    font-size: 18px;
+    padding: 5px;
+}
+.product-stock {
+    padding: 5px;
+    color: rgba(134, 133, 134, 0.916);
+    font-size: 12px;
+}
+.product-id {
+    padding: 5px;
+    color:black;
+    font-size: 12px;
+}

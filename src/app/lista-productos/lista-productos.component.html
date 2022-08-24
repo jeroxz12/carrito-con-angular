@@ -1,0 +1,28 @@
+<div class="product-list-container">
+    <div *ngFor="let producto of listaProductos" class="producto">
+            <img src="{{producto.imagen}}" class="product-img" alt="" >
+            <p class="product-title">{{producto.descripcion}}</p>
+            <p class="product-id">{{producto.id}}</p>
+            <p class="product-stock">Stock: {{producto.stock}}</p> 
+            <button class="btn-add" (click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+    </div>
+</div>
+<div class="cart-table">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Stock</th>
+            <th>Imagen</th>
+        </tr>
+        <tr *ngFor="let item of carrito">
+            <td>{{item.id}}</td>
+            <td>{{item.descripcion}}</td>
+            <td>{{item.stock}}</td>
+            <td><img src="{{item.imagen}}"  class="product-img" alt=""></td>
+        </tr>
+    </table>
+    <button class="btn-buy-cart" (click)="comprarCarrito()">Finalizar Compra</button>
+
+    <button class="btn-clear-cart" (click)="vaciarCarrito()">Vaciar Carrito</button>
+</div>
